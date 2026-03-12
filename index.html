@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Scientific Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-body">
+        <div class="brand">
+            <span class="brand-name">CASIO-STYLE</span>
+            <span class="model-number">fx-G991-SPLIT</span>
+        </div>
+
+        <div class="screen">
+            <div id="previous-operand" class="expression-line"></div>
+            <div id="current-operand" class="result-line">0</div>
+        </div>
+
+        <!-- Split Layout Wrapper -->
+        <div class="main-keypad">
+            <!-- Left Side: Numeric Pad -->
+            <div class="numeric-pad">
+                <button class="btn btn-num">7</button>
+                <button class="btn btn-num">8</button>
+                <button class="btn btn-num">9</button>
+                
+                <button class="btn btn-num">4</button>
+                <button class="btn btn-num">5</button>
+                <button class="btn btn-num">6</button>
+                
+                <button class="btn btn-num">1</button>
+                <button class="btn btn-num">2</button>
+                <button class="btn btn-num">3</button>
+                
+                <button class="btn btn-num">0</button>
+                <button class="btn btn-num">.</button>
+                <button class="btn btn-num" data-action="pow10">exp</button>
+            </div>
+
+            <!-- Right Side: Action Pad (Scientific + Operators) -->
+            <div class="action-pad">
+                <!-- Top: Scientific Row 1 -->
+                <button class="btn btn-sci" data-action="sin">sin</button>
+                <button class="btn btn-sci" data-action="cos">cos</button>
+                <button class="btn btn-sci" data-action="tan">tan</button>
+                <!-- TOP RIGHT CORNER POSITION -->
+                <button class="btn btn-clear" data-action="delete">DEL</button>
+                
+                <!-- Row 2 -->
+                <button class="btn btn-sci" data-action="asin">sin⁻¹</button>
+                <button class="btn btn-sci" data-action="acos">cos⁻¹</button>
+                <button class="btn btn-sci" data-action="atan">tan⁻¹</button>
+                <button class="btn btn-sci" data-action="pow">x^y</button>
+
+                <!-- Row 3 -->
+                <button class="btn btn-sci" data-action="log">log</button>
+                <button class="btn btn-sci" data-action="ln">ln</button>
+                <button class="btn btn-sci" data-action="sqrt">√</button>
+                <button class="btn btn-sci" data-action="pi">π</button>
+
+                <!-- Row 4 -->
+                <button class="btn btn-sci" data-action="append-text">(</button>
+                <button class="btn btn-sci" data-action="append-text">)</button>
+                <button class="btn btn-op" data-action="mod">mod</button>
+                <button class="btn btn-op" data-action="multiply">×</button>
+                
+                <!-- Row 5 -->
+                <button class="btn btn-op" data-action="divide">÷</button>
+                <button class="btn btn-op" data-action="add">+</button>
+                <button class="btn btn-op" data-action="subtract">−</button>
+                <button class="btn btn-op" data-action="ans">Ans</button>
+
+                <!-- BOTTOM RIGHT CORNER -->
+                <button class="btn btn-sci" data-action="factorial">x!</button>
+                <button class="btn btn-clear" data-action="clear-all">AC</button>
+                <button class="btn btn-equal span-2" data-action="equals">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
